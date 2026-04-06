@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taskify - Task Tracker</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taskify - Advanced Task Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+  <div class="container">
+    <img src="assets/acies-logo.png" alt="Acies Global Logo" class="todo-logo" />
 
-    <div class="container">
-      <img src="assets/acies-logo.png" alt="todo logo" class="todo-logo">
+    <h2>TASKIFY</h2>
 
-      <h2>TASK TRACKER</h2>
-
-      <div class="add-row">
-        <input id="new-task" type="text" placeholder="Enter a task..." autofocus />
-        <button id="add-task" type="button">Add</button>
-      </div>
-
-      <div class="controls">
-        <button id="sort-name" type="button">Sort A–Z</button>
-        <button id="sort-status" type="button">Sort by Status</button>
-        <button id="mark-all" type="button">Mark All Completed</button>
-      </div>
-
-      <ul id="task-list">
-        </ul>
+    <div class="add-row">
+      <input id="new-task" type="text" placeholder="Enter a task..." />
+      <button id="add-task">Add</button>
     </div>
 
-    <script src="script.js"></script>
+    <!-- 🔍 Search with icon -->
+    <div class="search-wrapper">
+      <input id="search" type="text" placeholder="Search tasks..." />
+      <span class="search-icon" aria-hidden="true">&#128269;</span>
+    </div>
+
+    <!-- 📊 Progress Bar -->
+    <div class="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+
+    <div class="controls">
+      <button id="sort-name">Sort A–Z</button>
+      <button id="sort-status">Sort by Status</button>
+      <button id="mark-all">Mark All Completed</button>
+      <button id="clear-completed">Clear Completed</button>
+      <button id="clear-all">Clear All</button>
+    </div>
+
+    <!-- 📊 Task Counter -->
+    <p id="task-count"></p>
+
+    <ul id="task-list"></ul>
+  </div>
+
+  <!-- 🔔 Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
